@@ -16,15 +16,15 @@
 <meta property="og:site_name" content="upuptop-I believe I can do it">
 <meta property="og:description" content="linux学习记录  下载地址centos 下载地址：  网易镜像：http://mirrors.163.com/centos/6/isos/ 搜狐镜像：http://mirrors.sohu.com/centos/6/isos/  Linux目录结构  /bin：是Binary的缩写，这个目录存放着系统必备执行命令 /boot：这里存放的是启动Linux时使用的一些核心文件，包括一些连接文件以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img-blog.csdnimg.cn/20190108213126256.png">
 <meta property="og:image" content="http://wintp.top/assets/blog_img/liunx/file_tree.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190108222720756.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190108224945568.png">
-<meta property="og:updated_time" content="2019-01-12T06:13:23.001Z">
+<meta property="og:image" content="http://wintp.top/assets/blog_img/liunx/root_config.png">
+<meta property="og:image" content="http://wintp.top/assets/blog_img/liunx/quanxian_biaoshi.png">
+<meta property="og:image" content="http://wintp.top/assets/blog_img/liunx/zuchegnbufen.png">
+<meta property="og:updated_time" content="2019-01-12T06:17:02.448Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux">
 <meta name="twitter:description" content="linux学习记录  下载地址centos 下载地址：  网易镜像：http://mirrors.163.com/centos/6/isos/ 搜狐镜像：http://mirrors.sohu.com/centos/6/isos/  Linux目录结构  /bin：是Binary的缩写，这个目录存放着系统必备执行命令 /boot：这里存放的是启动Linux时使用的一些核心文件，包括一些连接文件以">
-<meta name="twitter:image" content="http://img-blog.csdnimg.cn/20190108213126256.png">
+<meta name="twitter:image" content="http://wintp.top/assets/blog_img/liunx/file_tree.png">
   
   
     <link rel="icon" href="/assets/img/default_avator.jpg">
@@ -216,7 +216,7 @@
 <p>网易镜像：<a href="http://mirrors.163.com/centos/6/isos/" target="_blank" rel="noopener">http://mirrors.163.com/centos/6/isos/</a></p>
 <p>搜狐镜像：<a href="http://mirrors.sohu.com/centos/6/isos/" target="_blank" rel="noopener">http://mirrors.sohu.com/centos/6/isos/</a></p>
 </blockquote>
-<h4 id="Linux目录结构"><a href="#Linux目录结构" class="headerlink" title="Linux目录结构"></a>Linux目录结构</h4><p><img src="http://img-blog.csdnimg.cn/20190108213126256.png" alt="文件目录结构图"></p>
+<h4 id="Linux目录结构"><a href="#Linux目录结构" class="headerlink" title="Linux目录结构"></a>Linux目录结构</h4><p><img src="http://wintp.top/assets/blog_img/liunx/file_tree.png" alt="文件目录结构图"></p>
 <blockquote>
 <p>/bin：是Binary的缩写，这个目录存放着系统必备执行命令</p>
 <p>/boot：这里存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件，自己的安装别放这里</p>
@@ -295,7 +295,7 @@
 <h6 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.删除用户但保存用户主目录</span><br><span class="line">			userdel  用户名		</span><br><span class="line">2.删除用户不保存用户主目录</span><br><span class="line">			userdel -r  用户名</span><br></pre></td></tr></table></figure>
 <h6 id="查看登录用户信息"><a href="#查看登录用户信息" class="headerlink" title="查看登录用户信息"></a>查看登录用户信息</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.显示自身用户名称</span><br><span class="line">			whoami		</span><br><span class="line">2.显示登录用户的用户名</span><br><span class="line">			who am i	</span><br><span class="line">2.查看当前有哪些用户登录到了本台机器上</span><br><span class="line">			who</span><br></pre></td></tr></table></figure>
 <h6 id="设置普通用户具有root权限"><a href="#设置普通用户具有root权限" class="headerlink" title="设置普通用户具有root权限"></a>设置普通用户具有root权限</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vi /etc/sudoers</span><br></pre></td></tr></table></figure>
-<p><img src="http://wintp.top/assets/blog_img/liunx/file_tree.png" alt="修改普通用户具有root权限"></p>
+<p><img src="http://wintp.top/assets/blog_img/liunx/root_config.png" alt="修改普通用户具有root权限"></p>
 <h5 id="用户组"><a href="#用户组" class="headerlink" title="用户组"></a>用户组</h5><h6 id="添加用户组"><a href="#添加用户组" class="headerlink" title="添加用户组"></a>添加用户组</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd 组名</span><br></pre></td></tr></table></figure>
 <h6 id="删除用户组"><a href="#删除用户组" class="headerlink" title="删除用户组"></a>删除用户组</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupdel 组名</span><br></pre></td></tr></table></figure>
 <h6 id="修改用户组"><a href="#修改用户组" class="headerlink" title="修改用户组"></a>修改用户组</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupmod -n 新组名 老组名</span><br></pre></td></tr></table></figure>
@@ -313,7 +313,7 @@
 <h5 id="文件权限命令"><a href="#文件权限命令" class="headerlink" title="文件权限命令"></a>文件权限命令</h5><blockquote>
 <p>文件属性：</p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190108222720756.png" alt="文件属性"></p>
+<p><img src="http://wintp.top/assets/blog_img/liunx/quanxian_biaoshi.png" alt="文件属性"></p>
 <table>
 <thead>
 <tr>
@@ -365,7 +365,7 @@
 <h4 id="shell编程"><a href="#shell编程" class="headerlink" title="shell编程"></a>shell编程</h4><h5 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h5><blockquote>
 <p>Shell是一个命令行解释器，它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序，用户可以用Shell来启动、挂起、停止甚至是编写一些程序。<br> Shell还是一个功能相当强大的编程语言，易编写、易调试、灵活性强。Shell是解释执行的脚本语言，在Shell中可以调用Linux系统命令。</p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190108224945568.png" alt=""></p>
+<p><img src="http://wintp.top/assets/blog_img/liunx/zuchegnbufen.png" alt=""></p>
 <h5 id="shell脚本的执行方式"><a href="#shell脚本的执行方式" class="headerlink" title="shell脚本的执行方式"></a>shell脚本的执行方式</h5><p>1）echo输出命令<br>    （1）基本语法：<br>        echo [选项] [输出内容]<br>选项：<br>  -e：  支持反斜线控制的字符转换</p>
 <table>
 <thead>

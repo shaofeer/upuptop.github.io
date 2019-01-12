@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://wintp.top">
-  <title>hadoop_run_model | upuptop-I believe I can do it</title>
+  <title>hadoop的运行模式 | upuptop-I believe I can do it</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="概述12345678910111213141）资料查询（官方网址）	（1）官方网站：       	http://hadoop.apache.org/	（2）各个版本归档库地址		https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/	（3）hadoop2.7.6版本详情介绍		https://hadoop.apache.org/do">
 <meta name="keywords" content="exception,android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hadoop_run_model">
+<meta property="og:title" content="hadoop的运行模式">
 <meta property="og:url" content="http://wintp.top/2019/01/12/hadoop-run-model/index.html">
 <meta property="og:site_name" content="upuptop-I believe I can do it">
 <meta property="og:description" content="概述12345678910111213141）资料查询（官方网址）	（1）官方网站：       	http://hadoop.apache.org/	（2）各个版本归档库地址		https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/	（3）hadoop2.7.6版本详情介绍		https://hadoop.apache.org/do">
@@ -22,9 +22,9 @@
 <meta property="og:image" content="http://wintp.top/assets/blog_img/hadoop/hadoop_run_4">
 <meta property="og:image" content="http://wintp.top/assets/blog_img/hadoop/hadoop_run_5">
 <meta property="og:image" content="http://wintp.top/assets/blog_img/hadoop/hadoop_run_6">
-<meta property="og:updated_time" content="2019-01-12T07:36:06.557Z">
+<meta property="og:updated_time" content="2019-01-12T07:38:37.129Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hadoop_run_model">
+<meta name="twitter:title" content="hadoop的运行模式">
 <meta name="twitter:description" content="概述12345678910111213141）资料查询（官方网址）	（1）官方网站：       	http://hadoop.apache.org/	（2）各个版本归档库地址		https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/	（3）hadoop2.7.6版本详情介绍		https://hadoop.apache.org/do">
 <meta name="twitter:image" content="http://wintp.top/assets/blog_img/hadoop/hadoop_run_1">
   
@@ -203,7 +203,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hadoop_run_model
+      hadoop的运行模式
     </h1>
   
 
@@ -221,6 +221,7 @@
 <p>代码示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[shaofei@hadoop128 hadoop-2.7.7]$ mkdir input</span><br><span class="line">[shaofei@hadoop128 hadoop-2.7.7]$ cp -r etc/hadoop/*.xml input/</span><br><span class="line">[shaofei@hadoop128 hadoop-2.7.7]$ ll input/</span><br><span class="line">[shaofei@hadoop128 hadoop-2.7.7]$ hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.7.jar grep input/ output &apos;dfs[a-z.]+&apos;</span><br><span class="line">[shaofei@hadoop128 hadoop-2.7.7]$ cat output/*</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.2 官方wordcount案例</span><br><span class="line">	1）创建在hadoop-2.7.7文件下面创建一个wcinput文件夹</span><br><span class="line">	2）在wcinput文件下创建一个wc.input文件</span><br><span class="line">	3）编辑wc.input文件</span><br><span class="line">	4）回到hadoop目录/opt/module/hadoop-2.7.7</span><br><span class="line">	5）执行程序：</span><br><span class="line">	6）查看结果：</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>代码示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">    [shaofei@hadoop128 hadoop-2.7.7]$ mkdir wcinput</span><br><span class="line">    [shaofei@hadoop128 hadoop-2.7.7]$ vim wcinput/input.input</span><br><span class="line">    </span><br><span class="line">    java</span><br><span class="line">    java</span><br><span class="line">    java</span><br><span class="line">    hadoop</span><br><span class="line">    hadoop</span><br><span class="line">    python</span><br><span class="line">    pyfysf</span><br><span class="line">    upuptop</span><br><span class="line">    java</span><br><span class="line">    lll</span><br><span class="line">    haha</span><br><span class="line">    helloworld</span><br><span class="line"></span><br><span class="line">:wq</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    [shaofei@hadoop128 hadoop-2.7.7]$ hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.7.jar wordcount wcinput/ wcoutput</span><br><span class="line">    </span><br><span class="line">    [shaofei@hadoop128 hadoop-2.7.7]$ cat wcoutput/*</span><br><span class="line">    </span><br><span class="line">    hadoop	2</span><br><span class="line">    haha	1</span><br><span class="line">    helloworld	1</span><br><span class="line">    java	4</span><br><span class="line">    lll	1</span><br><span class="line">    pyfysf	1</span><br><span class="line">    python	1</span><br><span class="line">    upuptop	1</span><br></pre></td></tr></table></figure>
 <h4 id="2-伪分布式运行Hadoop-案例"><a href="#2-伪分布式运行Hadoop-案例" class="headerlink" title="2 伪分布式运行Hadoop 案例"></a>2 伪分布式运行Hadoop 案例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">  2.1 启动HDFS并运行MapReduce 程序</span><br><span class="line">1）执行步骤</span><br><span class="line">	（1）配置集群</span><br><span class="line">		（a）配置：hadoop-env.sh</span><br><span class="line">			Linux系统中获取jdk的安装路径：</span><br><span class="line">			修改JAVA_HOME 路径：</span><br><span class="line">		（b）配置：core-site.xml</span><br><span class="line">		（c）配置：hdfs-site.xml  </span><br><span class="line">	（2）启动集群</span><br><span class="line">		（a）格式化namenode（第一次启动时格式化，以后就不要总格式化）</span><br><span class="line">		（b）启动namenode</span><br><span class="line">		（c）启动datanode</span><br><span class="line">	（3）查看集群</span><br><span class="line">		（a）查看是否启动成功</span><br><span class="line">		（b）查看产生的log日志</span><br><span class="line">		（c）web端查看HDFS文件系统</span><br><span class="line">	（4）操作集群</span><br><span class="line">		（a）在hdfs文件系统上创建一个input文件夹</span><br><span class="line">		（b）将测试文件内容上传到文件系统上</span><br><span class="line">		（c）查看上传的文件是否正确</span><br><span class="line">		（d）运行mapreduce程序</span><br><span class="line">		（e）查看输出结果</span><br><span class="line">			命令行查看：</span><br><span class="line">			浏览器查看</span><br><span class="line">				浏览器查看.png</span><br><span class="line">		（f）将测试文件内容下载到本地</span><br><span class="line">		（g）删除输出结果</span><br></pre></td></tr></table></figure>
@@ -429,7 +430,7 @@ http://hadoop128:50070/explorer.html#/
   
   
     <a href="/2019/01/12/hadoop-install/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hadoop_install</div>
+      <div class="article-nav-title">hadoop在linux安装教程</div>
       <i class="icon-circle-right"></i>
     </a>
   

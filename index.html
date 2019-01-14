@@ -210,29 +210,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>百度OCR接口使用总结：<br>之前总结一下关于百度OCR文字识别接口的使用步骤（<a href="https://blog.csdn.net/pyfysf/article/details/77455330" target="_blank" rel="noopener">Android版本 不带包名配置  安全性弱</a>）.这边博客主要介绍，百度OCR文字识别接口，官方推荐使用方式，授权文件（安全模式）；</p>
+        <hr>
+<p>title: 百度OCR文字识别_android 实现 </p>
+<p>tags:</p>
+<ul>
+<li>exception</li>
+<li>android<br>toc: true<br>date: 2019-01-14 16:14:52</li>
+</ul>
+<hr>
+<p>百度OCR接口使用总结：<br>之前总结一下关于百度OCR文字识别接口的使用步骤（<a href="https://blog.csdn.net/pyfysf/article/details/77455330" target="_blank" rel="noopener">Android版本 不带包名配置  安全性弱</a>）.这边博客主要介绍，百度OCR文字识别接口，官方推荐使用方式，授权文件（安全模式）；</p>
 <blockquote>
 <p>最终实现结果如下</p>
 </blockquote>
-<p><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr1.gif" alt="效果预览"></p>
+<p><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr1.gif" alt="效果预览"></p>
 <h4 id="注册百度账号"><a href="#注册百度账号" class="headerlink" title="注册百度账号"></a>注册百度账号</h4><p>没有百度账号需要注册一个百度账号……<br><a href="https://passport.baidu.com/v2/?reg" target="_blank" rel="noopener">https://passport.baidu.com/v2/?reg</a></p>
-<h4 id="登录百度ai控制台"><a href="#登录百度ai控制台" class="headerlink" title="登录百度ai控制台"></a>登录百度ai控制台</h4><p><a href="http://ai.baidu.com/" target="_blank" rel="noopener">http://ai.baidu.com/</a><br><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr2.png" alt="ai登录"></p>
-<h4 id="创建文字识别应用"><a href="#创建文字识别应用" class="headerlink" title="创建文字识别应用"></a>创建文字识别应用</h4><p><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr3.png" alt="创建应用"></p>
+<h4 id="登录百度ai控制台"><a href="#登录百度ai控制台" class="headerlink" title="登录百度ai控制台"></a>登录百度ai控制台</h4><p><a href="http://ai.baidu.com/" target="_blank" rel="noopener">http://ai.baidu.com/</a><br><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr2.png" alt="ai登录"></p>
+<h4 id="创建文字识别应用"><a href="#创建文字识别应用" class="headerlink" title="创建文字识别应用"></a>创建文字识别应用</h4><p><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr3.png" alt="创建应用"></p>
 <p>填写相关信息（选择文字识别需要包名）</p>
-<p><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr4.png" alt=""><br>填写正确的包名<br><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr5.png" alt=""></p>
-<p><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr7.png" alt=""></p>
-<h4 id="下载相关文件"><a href="#下载相关文件" class="headerlink" title="下载相关文件"></a>下载相关文件</h4><p>下载sdk<br><a href="https://ai.baidu.com/sdk#ocr" target="_blank" rel="noopener">https://ai.baidu.com/sdk#ocr</a><br><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr8.png" alt="下载sdk"></p>
-<p>点击查看应用详情，下载License文件-Android（文字识别）<br><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr9.png" alt=""></p>
+<p><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr4.png" alt=""><br>填写正确的包名<br><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr5.png" alt=""></p>
+<p><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr7.png" alt=""></p>
+<h4 id="下载相关文件"><a href="#下载相关文件" class="headerlink" title="下载相关文件"></a>下载相关文件</h4><p>下载sdk<br><a href="https://ai.baidu.com/sdk#ocr" target="_blank" rel="noopener">https://ai.baidu.com/sdk#ocr</a><br><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr8.png" alt="下载sdk"></p>
+<p>点击查看应用详情，下载License文件-Android（文字识别）</p>
+<p><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr9.png" alt=""><br><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr10.png" alt=""></p>
 <h4 id="新建工程"><a href="#新建工程" class="headerlink" title="新建工程"></a>新建工程</h4><p>1.导入jar包及so文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">文件位置：</span><br><span class="line">	\aip-ocr-android-sdk-1.4.4\aip-ocr-android-sdk-1.4.4\libs\ocr-sdk.jar</span><br><span class="line">	</span><br><span class="line">	将libs目录下armeabi，arm64-v8a，armeabi-v7a，x86文件夹按需添加到android studio工程src/main/jniLibs目录中</span><br></pre></td></tr></table></figure>
 <p>2.导入License文件</p>
 <p>将License文件添加到<code>assets</code>文件夹里面</p>
 <p>3.添加相应的权限</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot;/&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot;/&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;/&gt;</span><br></pre></td></tr></table></figure>
-<p>4.如需使用UI模块，导入ocr-ui工程。（如不需要，可跳过该步骤）<br><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr10.png" alt=""></p>
-<p><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr11.png" alt=""><br><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr12.png" alt=""></p>
-<p><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr13.png" alt=""></p>
-<p><img src="http://wintp.top/assets/blog_img/liunx/baidu_ocr14.png" alt=""></p>
+<p>4.如需使用UI模块，导入ocr-ui工程。（如不需要，可跳过该步骤）<br><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr11.png" alt=""><br><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr12.png" alt=""></p>
+<p><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr13.png" alt=""></p>
+<p><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr14.png" alt=""><br><img src="http://wintp.top/assets/blog_img/baidu_ocr/baidu_ocr15.png" alt=""></p>
 <blockquote>
 <p>获取token代码</p>
 </blockquote>
